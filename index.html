@@ -72,9 +72,11 @@
 	.grid{
         padding: 10px;
         display: grid;
-        margin-right:10px;
-        grid-template-columns:20% 23% 23% 22%;
-        grid-column-gap: 5%;
+        margin:0 auto;
+		text-align: center;
+		justify-content: center;
+        grid-template-columns:25% 25% 25% 23%;
+        grid-column-gap: 2%;
         grid-row-gap: 2%;
         }
 
@@ -216,6 +218,65 @@
 			background-size: cover;
 			border-radius: 20px;
 			}
+			
+		<!-- for the top DESTINATIONS-->
+		
+				html {
+				  box-sizing: border-box;
+				}
+
+				*, *:before, *:after {
+				  box-sizing: inherit;
+				}
+
+				.column {
+				  float: left;
+				  width: 23%;
+				  margin: 5px;
+				  padding:3px;
+				}
+
+				@media screen and (max-width: 650px) {
+				  .column {
+					width: 50%;
+					display: block;
+				  }
+				}
+
+				.card {
+				  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+				}
+
+				.container {
+				  padding: 0 16px;
+				  background-color: white;
+				}
+
+				.container::after, .row::after {
+				  content: "";
+				  clear: both;
+				  display: table;
+				}
+
+				.title {
+				  color: grey;
+				}
+
+				.button {
+				  border: none;
+				  outline: 0;
+				  display: inline-block;
+				  padding: 8px;
+				  color: white;
+				  background-color: #000;
+				  text-align: center;
+				  cursor: pointer;
+				  width: 100%;
+				}
+
+				.button:hover {
+				  background-color: #555;
+				}
 	</style>
 	</head>
 	<body>
@@ -224,25 +285,25 @@
 		
 			<div class="mySlides fade">
 			  <div class="numbertext">1 / 4</div>
-			  <img src="images/gorilla.jpeg" style="width:100%; height:600px">
+			  <img src="images/slider1.jpg" style="width:100%; height:600px">
 			  <div class="text">UGANDA</div>
 			</div>
 			
 			<div class="mySlides fade">
 			  <div class="numbertext">2 / 4</div>
-			  <img src="images/fb1.jpg" style="width:100%; height:600px">
+			  <img src="images/slider2.jpg" style="width:100%; height:600px">
 			  <div class="text">KENYA</div>
 			</div>
 
 			<div class="mySlides fade">
 			  <div class="numbertext">3 / 4</div>
-			  <img src="images/fb2.jpg" style="width:100%; height:600px">
+			  <img src="images/slider1.jpg" style="width:100%; height:600px">
 			  <div class="text">RWANDA</div>
 			</div>
 
 			<div class="mySlides fade">
 			  <div class="numbertext">4 / 4</div>
-			  <img src="images/fb3.jpg" style="width:100%; height:600px">
+			  <img src="images/slider3.jpg" style="width:100%; height:600px">
 			  <div class="text">TANZANIA</div>
 			</div>
 
@@ -299,19 +360,57 @@
 	</p>
 	</div>
 	
-	<div style="background-color:grey; border-radius:20px;">
-		<h1 style="padding:10px; text-align:center; font-family:bradley hand itc;">OUR POPULAR DESTINATIONS</h1>
-		<div style="margin:0px 100px">
-			<div class="grid">
-				<div style="background:url(images/logo.jpg); background-size:cover"><figcaption class="fg"> UGANDA</figcaption></div>
-				<div style="background:url(images/logo.jpg); background-size:cover; postion: center"><figcaption class="fg">KENYA</figcaption></div>
-				<div style="background:url(images/logo.jpg); background-size:cover; postion: center"><figcaption class="fg">TANZANIA</figcaption></div>
-				<div style="background:url(images/logo.jpg); background-size:cover"><figcaption class="fg">RWANDA</figcaption></div>
+	<div class="row"style="background-color:grey; border-radius:20px; text-align: center;">
+			<h2 style="text-align:center; font-family: bradley Hand itc; font-size: 50px">OUR POPULAR DESTINATIONS</h2>
+			  <div class="column">
+				<div class="card">
+				  <img src="images/topu1.jpg" alt="Jane" style="width:100%">
+				  <div class="container">
+					<h2>UGANDA</h2>
+					<p class="title">APES</p>
+					<p>Some text that describes me lorem ipsum ipsum lorem.</p>
+					<p><button class="button">View Trip</button></p>
+				  </div>
+				</div>
+			  </div>
+			  
+				<div class="column">
+				<div class="card">
+				  <img src="images/topk1.jpg" alt="Jane" style="width:100%">
+				  <div class="container">
+					<h2>KENYA</h2>
+					<p class="title">LIONS</p>
+					<p>Some text that describes me lorem ipsum ipsum lorem.</p>
+					<p><button class="button">View Trip</button></p>
+				  </div>
+				</div>
+			  </div>
+
+			  <div class="column">
+				<div class="card">
+				  <img src="images/topt1.jpg" alt="Mike" style="width:100%">
+				  <div class="container">
+					<h2>TANZANIA</h2>
+					<p class="title">WILD BEASTS</p>
+					<p>Some text that describes me lorem ipsum ipsum lorem.</p>
+					<p><button class="button">View Trip</button></p>
+				  </div>
+				</div>
+			  </div>
+			  
+			  <div class="column">
+				<div class="card">
+				  <img src="images/topr1.jpg" alt="John" style="width:100%">
+				  <div class="container">
+					<h2>RWANDA</h2>
+					<p class="title">GORILLAS</p>
+					<p>Some text that describes me lorem ipsum ipsum lorem.</p>
+					<p><button class="button">View Trip</button></p>
+				  </div>
+				</div>
+			  </div>
 			</div>
-		</div>
-	</div>
-	
-	</br>
+
 	
 	<div style="margin:100px;">
 		<h1 style="text-align:center; font-family:bradley hand itc;">Top packages</h1>
