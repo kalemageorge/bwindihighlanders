@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta charset="utf-8" />
+		<meta name= "viewport" content= "width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" href="images/logo.jpg">
+		<title>Bwindihighlanders.com</title>	
+		
+	<style>
+	div{
+		font-size:18px;
+		}
+	
+	.top1{
+		background:url(images/slider1.jpg); 
+		background-size:cover; 
+		background-repeat: no-repeat; 
+		background-position: center; 
+		width: 100%; 
+		height: 600px;
+		}
+		
+	.top1 div{
+		margin:50px; 
+		width: 70%; 
+		margin-top: 40%; 
+		background-color:#dddddd; 
+		padding: 10px; 
+		border-radius: 20px; 
+		float: left; 
+		z-index: 1;
+	}
+	
+	.fg3{
+        position: relative;
+        height: 50px;
+        width: 100%;
+        top: 40%;
+        font-size: 30px;
+        color: white;
+        text-align: center;
+        }
+		
+	.fg3 a{
+		text-decoration: none;
+		font-size:1.5rem;
+		color:maroon;
+		font-family: forte, "brush script mt";
+		background-color: white;
+	}
+	.fg3 a:hover{
+		background-color: green;
+	}
+	
+	.fg3 p{
+		font-weight: bold;
+		font-size: 1.3rem;
+	}
+			
+	.grid{
+        display: grid;
+		text-align: center;
+		justify-content: center;
+        grid-template-columns:98%;
+        grid-row-gap: 2%;
+        }
+
+    .grid div{
+       height: 250px;
+	   width:100%;
+       border-radius: 20px;
+       }
+	   
+	   	
+		.foot{
+		font-size:50px;
+			background-color: #76BA1B;
+			}
+	   
+		/* Caption text */
+		.text {
+		  overflow:hidden;
+		  color: white;
+		  font-weight: bold;
+		  font-size: 50px;
+		  padding: 8px 12px;
+		  position: absolute;
+		 left :20%;
+		  top: 50%;
+		  width: 70%;
+		  height: auto;
+		  animation: text 2s ease-out;
+			}
+			
+		@keyframes text{
+			0% {
+				transform: translateY(200%);
+			}
+			100%{
+				transform: translateY(0%);
+				}
+			}
+		
+		table{
+		background-color:green;
+			background-image: linear-gradient(black,green, white);
+			/*background: linear-gradient(90deg,
+							rgba(255, 255, 255, 0) 0%,
+							rgba(255, 255, 255, 0.2) 25%,
+							rgba(255, 255, 255, 0.2) 75%,
+							rgba(255, 255, 255, 0) 100%);*/
+			box-shadow: 0 0 25px rgba(0, 0, 0, 0.1),
+						inset 0 0 1px rgba(255, 255, 255, 0.6);
+		}
+		table, td{
+			border-left: 1px solid maroon;
+			text-align: center;
+			
+				}
+		
+		table, td, a{
+			text-decoration: none;
+			font-family: Arial;
+			color: black;
+		}
+		table, td a:hover{
+			background-color: maroon;
+			color: white;
+			font-family: bradley hand ITC;
+		}
+		
+			/* The container div - needed to position the dropdown content */
+			.dropdown {
+			  position: relative;
+			  display: none;
+			}
+			/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+			.show {display:none;}
+		.img1{
+			display: none;
+		}
+		.menu {
+				  filter: url("#shadowed-goo");
+				}
+
+				.menu-item, .menu-open-button {
+				  background: #00bcd4;
+				  border-radius: 100%;
+				  width: 80px;
+				  height: 80px;
+				  margin-left: -40px;
+				  position: absolute;
+				  top: 20px;
+				  color: white;
+				  text-align: center;
+				  line-height: 80px;
+				  transform: translate3d(0, 0, 0);
+				  transition: transform ease-out 200ms;
+				}
+
+				.menu-open {
+				  display: none;
+				}
+
+				.hamburger {
+				  width: 25px;
+				  height: 3px;
+				  background: white;
+				  display: block;
+				  position: absolute;
+				  top: 50%;
+				  left: 50%;
+				  margin-left: -12.5px;
+				  margin-top: -1.5px;
+				  transition: transform 200ms;
+				}
+
+				.hamburger-1 {
+				  transform: translate3d(0, -8px, 0);
+				}
+
+				.hamburger-2 {
+				  transform: translate3d(0, 0, 0);
+				}
+
+				.hamburger-3 {
+				  transform: translate3d(0, 8px, 0);
+				}
+
+				.menu-open:checked + .menu-open-button .hamburger-1 {
+				  transform: translate3d(0, 0, 0) rotate(45deg);
+				}
+				.menu-open:checked + .menu-open-button .hamburger-2 {
+				  transform: translate3d(0, 0, 0) scale(0.1, 1);
+				}
+				.menu-open:checked + .menu-open-button .hamburger-3 {
+				  transform: translate3d(0, 0, 0) rotate(-45deg);
+				}
+
+				.menu {
+				  position: fixed;
+				  bottom: 4%;
+				  left: 5%;
+				  margin-left: -80px;
+				  padding-top: 20px;
+				  padding-left: 80px;
+				  width: 650px;
+				  height: 150px;
+				  box-sizing: border-box;
+				  font-size: 20px;
+				  text-align: left;
+				}
+
+				.menu-item:hover {
+				  background: white;
+				  color: #00bcd4;
+				}
+				.menu-item:nth-child(3) {
+				  transition-duration: 180ms;
+				}
+				.menu-item:nth-child(4) {
+				  transition-duration: 180ms;
+				}
+				.menu-item:nth-child(5) {
+				  transition-duration: 180ms;
+				}
+				.menu-item:nth-child(6) {
+				  transition-duration: 180ms;
+				}
+
+				.menu-open-button {
+				  z-index: 2;
+				  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+				  transition-duration: 400ms;
+				  transform: scale(1.1, 1.1) translate3d(0, 0, 0);
+				  cursor: pointer;
+				}
+
+				.menu-open-button:hover {
+				  transform: scale(1.2, 1.2) translate3d(0, 0, 0);
+				}
+
+				.menu-open:checked + .menu-open-button {
+				  transition-timing-function: linear;
+				  transition-duration: 200ms;
+				  transform: scale(0.8, 0.8) translate3d(0, 0, 0);
+				}
+
+				.menu-open:checked ~ .menu-item {
+				  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+				}
+				.menu-open:checked ~ .menu-item:nth-child(3) {
+				  transition-duration: 190ms;
+				  transform: translate3d(110px, 0, 0);
+				}
+				.menu-open:checked ~ .menu-item:nth-child(4) {
+				  transition-duration: 290ms;
+				  transform: translate3d(220px, 0, 0);
+				}
+				.menu-open:checked ~ .menu-item:nth-child(5) {
+				  transition-duration: 390ms;
+				  transform: translate3d(330px, 0, 0);
+				}
+				.menu-open:checked ~ .menu-item:nth-child(6) {
+				  transition-duration: 490ms;
+				  transform: translate3d(440px, 0, 0);
+				}
+		/* contact us*/
+		
+		/* Style inputs */
+				input[type=text], select, textarea {
+				  width: 100%;
+				  padding: 12px;
+				  border: 1px solid #ccc;
+				  margin-top: 6px;
+				  margin-bottom: 16px;
+				  resize: vertical;
+				}
+
+				input[type=submit] {
+				  background-color: #04AA6D;
+				  color: white;
+				  padding: 12px 20px;
+				  border: none;
+				  cursor: pointer;
+				}
+
+				input[type=submit]:hover {
+				  background-color: #45a049;
+				}
+
+				/* Style the container/contact section */
+				.container1 {
+				  border-radius: 20px;
+				  background-color: #f2f2f2;
+				  padding: 10px;
+				}
+
+				/* Create two columns that float next to eachother */
+				.column {
+				  float: left;
+				  width: 45%;
+				  margin-top: 6px;
+				  padding: 20px;
+				}
+
+				/* Clear floats after the columns */
+				.row:after {
+				  content: "";
+				  display: table;
+				  clear: both;
+				}
+				
+			/* On smaller screens, decrease text size */
+		@media only screen and (max-width: 600px) {
+		
+		.top1{
+			height: 300px;
+		}
+		
+		.top1 div{
+			margin:5px; 
+			width: 95%; 
+			margin-top: 40%; 
+			background-color:#dddddd; 
+			padding: 10px; 
+			border-radius: 20px; 
+			float: left; 
+			z-index: 1;
+		}
+		
+		.img1{
+			width: 100px;
+			height: 100px;
+			position: fixed;
+		}
+		
+		table{
+			display:none;
+		}
+		.html{
+			margin:0px;
+		}
+		  .prev, .next,.text {font-size: 11px}
+		  
+		/* Caption text */
+		.text {
+		  font-size: 25px;
+		  padding: 4px 6px;
+		 left :5%;
+		  top: 10%;
+			}
+		
+	.grid{
+        padding: 5px;
+        grid-template-columns:48% 48%;
+        grid-column-gap: 4%;
+        }
+
+    .grid div{
+       height: 200px;
+       }
+	   
+	.fg3{
+        position: relative;
+        height: 50px;
+        width: 100%;
+        top: 30%;
+        font-size: 25px;
+        color: white;
+        text-align: center;
+        }  
+	
+	/* Dropdown Button */
+		.dropbtn {
+			  background-color: green;
+			  color: white;
+			  padding: 16px;
+			  font-size: 16px;
+			  border: none;
+			  cursor: pointer;
+			}
+
+			/* Dropdown button on hover & focus */
+		.dropbtn:hover, .dropbtn:focus {
+			  background-color: maroon;
+			}
+
+			/* The container  div- needed to position the dropdown content */
+		.dropdown {
+			right:10%;
+			float: right;
+			position: relative;
+			display: inline-block;
+			}
+
+			/* Dropdown Content (Hidden by Default) */
+			.dropdown-content {
+			  display: none;
+			  font-size: 15px;
+			  position: absolute;
+			  background-color: #f1f1f1;
+			  min-width: 250px;
+			  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+			  z-index: 3;
+			  right:10%;
+			  overflow: auto;
+			}
+
+			/* Links inside the dropdown */
+			.dropdown-content a {
+			  color: black;
+			  padding: 12px 16px;
+			  text-decoration: none;
+			  display: block;
+			}
+
+			/* Change color of dropdown links on hover */
+			.dropdown-content a:hover {background-color: #ddd;}
+
+			/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+			.show {display:block;}
+				
+
+		.column, input[type=submit] {
+					width: 92%;
+					margin-top: 0;
+				  }
+	   
+		}
+
+		
+		
+		
+			
+		
+	</style>
+	</head>
+	<body>
+			<!--Navigation bar-->
+	<table style="width:100%;">
+		<tr>
+			<th rowspan="3" style="background:url(images/logo1.png); background-size:cover; background-repeat: no-repeat; background-position: center; width:200px; height:200px;"></th>
+				<th colspan="8" style="background-color:#68bb59; color: white;"><img src="images/youtube.png" style="border-radius:20px;  text-align: right; width: 2%; height: 2%;"><img src="images/youtube.png" style="border-radius:20px; width: 2%; height: 2%;"></th>
+		</tr>
+		<tr>
+			<td><a href="index.html">HOME</a></td>
+			<td><a href="#">UGANDA<br> SAFARIS</a></td>
+			<td><a href="#">KENYA<br> SAFARIS</a></td>
+			<td><a href="#">RWANDA<br> SAFARIS</a></td>
+			<td><a href="#">TANZANIA<br> SAFARIS</a></td>
+			<td><a href="#">CONTANT US</a></td>
+			<td><a href="#">UPDATE</a></td>
+			<td><a href="#">INQUIRE WITH US</a></td>
+		</tr>
+	</table>
+	
+	<div>
+	<img src="images/logo1.png" class= "img1">
+	<div class="dropdown">
+		  <button onclick="myFunction()" class="dropbtn">More</button>
+		  <div id="myDropdown" class="dropdown-content">
+			<a href="#">UGANDA SAFARIS</a>
+			<a href="#">KENYA SAFARIS</a>
+			<a href="#">RWANDA SAFARIS</a>
+			<a href="#">TANZANIA SAFARIS</a>
+			<a href="#">CONTANT US</a>
+			<a href="#">UPDATE</a>
+			<a href="#">INQUIRE WITH US</a>
+		  </div>
+	</div>
+	</div>
+	
+	<div class="top1">
+		<p class="text" style="text-align: center; margin-top: 20%">3 Days of Mountain Rwenzori Hiking Safaris</p>
+		
+		<div>
+			<p> Although most of the people thing that you need very many day to hike the mountain Rwenzori, it is important to note that you can as well do the hike in just 
+			three days.  The 3 day mountain Rwenzori Hiking safari is the one of the very interesting hiking safari that will lead you to the mountain Ruwenzori dubbed the 
+			mountain of the moon. The Rwenzori mountains stenches high up to height of 5,109 meters above the sea level. For this great safari experience, you will either use 
+			the Kilemebe trekking route or the prominent Rwenzori central circuit to be able to complete this uphill adventure. Climbing mountain Ruwenzori is absolutely adventures 
+			and it can be booked for more than 3 days even going upto ten days to be able to react up to the snow caped mountain. In the south, the mountain is located not far from 
+			the equator line. In addition to guaranteeing your safety and security while traveling with us, we do organize trips to the area and can make one for you based on the days 
+			you have available. For your convenience, we have decide to come up with3 Day Mountain Rwenzori Hiking safari. The tour also includes lodging, camping equipment while on 
+			the mountain, and other services described within the Itinerary as listed below.
+
+			<h2>Day 1: Arrival to Entebbe International Airport- Meet and greet-Transfer Kasese town for overnight stay</h2>
+			<p>You will be picked up from the airport or guest house after breakfast to begin your 3 day mountain Rwenzori Hiking safari. You can expect to spend about 8 hours driving. 
+			You will stop in Mubede for lunch before continuing on to Kasese to spend the night at a hotel nearby as you get ready for the following day's trek. You need to have enough rest for this hiking exercise.</p>
+
+			<h2>Day 2; Kasese-Hike to Sine camp</h2>
+			<p>On this day, you will move to the mountain's foothills to begin your ascent from 1,450 to Sine Hut 2,680m, where you spend the night. The Afro Montane Forest Zone's tall 
+			forest trees line the beginning of this hike, which continues with a steady climb through a variety of bird species and the potential to spot blue monkeys scampering through 
+			the forest. Visitors may occasionally catch a glimpse of groups of 15 to 20 black and white Colobus monkeys swinging through the trees. Rare sightings of the L'Hoest monkey, 
+			one of the cultural symbols of the Bukonzo people who are protected by the King or Omusinga, are possible.  As you hike, don’t be surprised if you hear  wild chimpanzee in 
+			the distance. From forest trees to bamboo thickets, low shrubs, flowers, fungi, and numerous moss and lichen covered vines hanging from the tall trees, the area is home to 
+			a wide variety of plant species. Only 200 meters away from Sine Hut, Enock's fall present a wonderful opportunity to create a wonderful screensaver for your memories. At Sine 
+			Camp, 2,596 meters above sea level, there are wooden huts tucked away between towering forest trees on a small ridge where you can sit and take in the splendor of the Afro 
+			Montane forest while gazing down at a magnificent waterfall tumbling over the rocks far below. In addition to the breathtaking views, those who are in shape and want to 
+			continue on to Kalalama Camp at 3,134 meters may do so as this gives you the extra time and additional experience at Mutinda Camp where you can ascend to Mutinda Lookout 
+			at 3,975 meters, aside from the wonderful views.
+
+			<h2>Day 3; Sine camp-Hike back to the foot of the mountain- transfer back to Kampala or Entebbe</h2>
+			<p>Return back down the mountain after breakfast, then travel back to Kampala Entebbe to conclude your three-day mountain hiking tour in time for your departure flight.
+			<h3>The price of this safari includes;</h3>
+			<ul>
+				<li>first and last day airport transfers,</li>
+				<li>a 4x4 safari vehicle for transportation</li>
+				<li>English-speaking driver's guide services</li>
+				<li>Fuel for the entire journey</li>
+				<li>According to the schedule, meals and lodging are provided.</li>
+				<li>all park admission costs</li>
+				<li>consuming liquids inside a moving vehicle</li>
+				<li>While staying in the mountains</li>
+				<li>hiking equipment  and Porters</li>
+				<li>All Rwenzori Mountain National Park entrance fees</li>
+			</ul>
+
+			<h3>The price of this safari doesn’t include;</h3>
+			<ul>
+				<li>Accommodations before and after the trip in Entebbe or Kampala International airfares</li>
+				<li>Uganda Visa ($50.00, payable at the airport upon arrival)</li>
+				<li>Items of a personal nature, such as laundry, beverages, and tips</li>
+			</ul>
+
+		</div>
+	</div>
+	
+<!-- top packagess-->	
+	<div>
+		<h1 style="text-align:center; font-family:bradley hand itc; font-size:50px;">Top packages</h1>
+		<div class="grid">
+			<div style="background:url(images/slider1.jpg); background-size:cover; background-repeat: no-repeat; background-position: center;"><figcaption class="fg3"><p>3 Days of Mountain Rwenzori Hiking Safaris</p><a href="#">view trip</a></figcaption></div>
+			<div style="background:url(images/slider2.jpg); background-size:cover; background-repeat: no-repeat; background-position: center;"><figcaption class="fg3"><p>5 Days Mountain Rwenzori Trekking Safari.</p><a href="#">view trip</a></figcaption></div>
+			<div style="background:url(images/slider3.jpg); background-size:cover; background-repeat: no-repeat; background-position: center;"><figcaption class="fg3"><p>6 Days Mountain Chimpanzee Trekking in Kibale Forest & Rwenzori.</p><a href="#">view trip</a></figcaption></div>
+			<div style="background:url(images/culture.jpg); background-size:cover; background-repeat: no-repeat; background-position: center;"><figcaption class="fg3"><p>7 Days Rwenzori Hiking experience</p><a href="#">view trip</a></figcaption></div>
+			<div style="background:url(images/culture.jpg); background-size:cover; background-repeat: no-repeat; background-position: center;"><figcaption class="fg3"><p>7 Days Rwenzori Hiking experience</p><a href="#">view trip</a></figcaption></div>
+			<div style="background:url(images/culture.jpg); background-size:cover; background-repeat: no-repeat; background-position: center;"><figcaption class="fg3"><p>7 Days Rwenzori Hiking experience</p><a href="#">view trip</a></figcaption></div>
+		</div>
+	<!--<div class="rdmore"><u>view more packages >></u></div>-->
+	</div>
+	
+	
+	<!--floating button-->
+			<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+		<nav class="menu">
+		  <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open"/>
+		  <label class="menu-open-button" for="menu-open">
+			<span class="hamburger hamburger-1"></span>
+			<span class="hamburger hamburger-2"></span>
+			<span class="hamburger hamburger-3"></span>
+		  </label>
+		  
+		  <a href="#" class="menu-item" style= "background:url(images/facebook.png);background-size:cover; background-position:center;"></a>
+		  <a href="#" class="menu-item" style= "background:url(images/youtube.png);background-size:cover; background-position:center;"></a>
+		  <a href="#" class="menu-item" style= "background:url(images/watsup.jpeg);background-size:cover; background-position:center;"></a>
+		  <a href="#" class="menu-item" style= "background:url(images/twitter.jpeg);background-size:cover; background-position:center;"></a>
+		  
+		  
+		</nav>
+
+
+		<!-- filters -->
+		<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+			<defs>
+			  <filter id="shadowed-goo">
+				  
+				  <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+				  <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+				  <feGaussianBlur in="goo" stdDeviation="3" result="shadow" />
+				  <feColorMatrix in="shadow" mode="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 -0.2" result="shadow" />
+				  <feOffset in="shadow" dx="1" dy="1" result="shadow" />
+				  <feComposite in2="shadow" in="goo" result="goo" />
+				  <feComposite in2="goo" in="SourceGraphic" result="mix" />
+			  </filter>
+			  <filter id="goo">
+				  <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+				  <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+				  <feComposite in2="goo" in="SourceGraphic" result="mix" />
+			  </filter>
+			</defs>
+		</svg>
+		
+		<!--contact us section-->
+		<div class="container1">
+			  <div style="text-align:center">
+				<h2>Contact Us</h2>
+				<p>Please get in touch with us</p>
+			  </div>
+			  <div class="row">
+				<div class="column">
+				  <img src="images/location.jpg" style="width:100%">
+				</div>
+				<div class="column">
+				  <form action="/action_page.php">
+					<label for="fname">First Name</label>
+					<input type="text" id="fname" name="firstname" placeholder="Your name..">
+					<label for="lname">Last Name</label>
+					<input type="text" id="lname" name="lastname" placeholder="Your last name..">
+					<label for="country">Country</label>
+					<select id="country" name="country">
+					  <option value="australia">Australia</option>
+					  <option value="canada">Canada</option>
+					  <option value="usa">USA</option>
+					</select>
+					<label for="subject">Subject</label>
+					<textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+					<input type="submit" value="Submit">
+				  </form>
+				</div>
+			  </div>
+			</div>
+
+		<!--footer
+	<div class="foot">
+		<div class="grid1">
+				<div>	
+					<p>ABOUT US</p>
+					<P>Bwindi Highlanders Voyages is a one stop centre for distinguished and exceptional African safaris.<P>
+					
+				
+				</div>
+				<div><p>Home of Mountain Gorillas</p></div>
+				<div><p>Home of Mountain Gorillas</p></div>
+			
+			</div>
+		</div>
+	</div>-->
+	
+	</body>
+	
+</html>	
